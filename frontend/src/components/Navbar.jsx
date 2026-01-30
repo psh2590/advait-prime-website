@@ -1,15 +1,16 @@
 export default function Navbar() {
   return (
-    <header className="bg-white shadow">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-primary">
-          Advait Prime Consultancy
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        <h1 className="text-lg font-bold tracking-tight text-slate-900">
+          Advait Prime
         </h1>
-        <nav className="space-x-6 text-sm font-medium">
-          <a href="#" className="hover:text-primary">Home</a>
-          <a href="#" className="hover:text-primary">Services</a>
-          <a href="#" className="hover:text-primary">Healthcare</a>
-          <a href="#" className="hover:text-primary">Contact</a>
+
+        <nav className="flex gap-8 text-sm font-medium text-slate-600">
+          <a href="#home" className="hover:text-slate-900">Home</a>
+          <a href="#services" className="hover:text-slate-900">Services</a>
+          <a href="#healthcare" className="hover:text-slate-900">Healthcare</a>
+          <a href="#contact" className="hover:text-slate-900">Contact</a>
         </nav>
       </div>
     </header>
