@@ -1,29 +1,28 @@
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-      <div className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-          Advait Prime <span className="text-indigo-300">Consultancy</span>
+    <section id="home" className="bg-slate-50">
+      <div className="mx-auto max-w-7xl px-6 py-28 text-center">
+        <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          Advait Prime Consultancy & Services
         </h1>
 
-        <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-200">
-          Professional advisory services with <span className="font-semibold text-white">10+ years</span> of
-          industry experience across business, real estate, and healthcare consulting.
+        <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+          Trusted advisory partner with 10+ years of experience across
+          business consulting, real estate advisory, and healthcare management.
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-10 flex justify-center gap-4">
           <a
             href="#contact"
-            className="rounded-lg bg-indigo-500 px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-indigo-600"
+            className="rounded-md bg-slate-900 px-8 py-3 text-sm font-semibold text-white hover:bg-slate-800"
           >
-            Contact Us
+            Get in Touch
           </a>
-
           <a
             href="#services"
-            className="rounded-lg border border-white/30 px-8 py-3 text-base font-semibold text-white transition hover:bg-white/10"
+            className="rounded-md border border-slate-300 px-8 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100"
           >
-            Our Services
+            View Services
           </a>
         </div>
       </div>
