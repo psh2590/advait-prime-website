@@ -1,21 +1,22 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Healthcare from "./components/Healthcare";
-import About from "./components/About";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import RealEstate from "./pages/RealEstate";
+import Business from "./pages/Business";
+import Healthcare from "./pages/Healthcare";
 
 export default function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Services />
-      <Healthcare />
-      <About />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services/real-estate" element={<RealEstate />} />
+        <Route path="/services/business" element={<Business />} />
+        <Route path="/services/healthcare" element={<Healthcare />} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
