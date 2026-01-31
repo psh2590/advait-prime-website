@@ -58,32 +58,51 @@ export default function Contact() {
             Send Us Your Requirement
           </h2>
 
-          <form className="space-y-4">
+          <form
+            action="https://formsubmit.co/advait.prime@gmail.com"
+            method="POST"
+            className="space-y-4"
+          >
+          {/* FormSubmit settings */}
+            <input type="hidden" name="_subject" value="New Query - Advait Prime" />
+            <input type="hidden" name="_captcha" value="false" />
             <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              type="hidden"
+              name="_next"
+              value="https://yourdomain.com/thank-you"
             />
 
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your Name"
+            className="w-full border rounded-md p-3"
+          />
 
-            <textarea
-              rows="4"
-              placeholder="Briefly describe your requirement"
-              className="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your Email"
+            className="w-full border rounded-md p-3"
+          />
 
-            <button
-              type="button"
-              className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700 transition"
-            >
-              Submit
-            </button>
-          </form>
+          <textarea
+            name="message"
+            rows="4"
+            required
+            placeholder="Your Requirement"
+            className="w-full border rounded-md p-3"
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-indigo-600 text-white py-3 rounded-md font-semibold hover:bg-indigo-700 transition"
+          >
+            Submit Query
+          </button>
+        </form>
 
           <p className="text-sm text-slate-500 mt-4 text-center">
             Our team will get back to you at the earliest.
