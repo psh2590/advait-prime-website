@@ -7,12 +7,17 @@ export default function Business() {
         </h1>
 
         <p className="mt-6 text-slate-300">
-          End-to-end business consulting services focused on operational
-          efficiency, growth strategy, and sustainable expansion.
+          Advait Prime Consultancy & Services provides structured consulting and facilitation support to businesses, factories, 
+		  and industrial entities for sourcing, coordination, and execution of commercial requirements. 
+		  We act as a professional interface between manufacturers, suppliers, buyers, and operational stakeholders to ensure clarity, efficiency, 
+		  and timely engagement.
         </p>
 
         <ul className="mt-8 space-y-3 list-disc list-inside text-slate-300">
-          <li>Business setup & expansion advisory</li>
+          <li>Industrial raw material sourcing facilitation</li>
+		  <li>Supplier and buyer coordination</li>
+		  <li>Factory-to-factory business facilitation</li>
+		  <li>Commercial requirement assessment</li>
           <li>Process optimization & cost control</li>
           <li>Market entry & growth strategy</li>
           <li>Risk assessment & compliance guidance</li>
@@ -55,4 +60,6 @@ export default function Business() {
     </section>
   );
 }
+
+
 
