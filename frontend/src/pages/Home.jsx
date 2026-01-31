@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Hero from "../components/Hero";
-import About from "../components/AboutPreview"; // optional short intro component
+//import About from "../components/AboutPreview"; // optional short intro component
 // If you don’t have AboutPreview, remove this import and section
 
 export default function Home() {
