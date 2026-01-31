@@ -24,10 +24,10 @@ export default function Navbar() {
           <img
             src="/logo.png"
             alt="Advait Prime"
-            className="h-12 md:h-14 w-auto"
+            className="h-14 md:h-16 w-auto"
           />
           <span className="text-white font-bold text-lg md:text-xl">
-            Advait Prime
+            Advait Prime Consultancy & Services
           </span>
         </NavLink>
 
@@ -73,3 +73,4 @@ export default function Navbar() {
     </header>
   );
 }
+
