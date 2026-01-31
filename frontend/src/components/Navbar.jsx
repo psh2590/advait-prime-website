@@ -1,20 +1,52 @@
+import { NavLink } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-slate-950 border-b border-slate-800">
       <div className="mx-auto max-w-7xl px-4 py-4 flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-lg font-bold text-white">
+        {/* Brand */}
+        <NavLink
+          to="/"
+          className="text-lg font-bold tracking-tight text-white"
+        >
           Advait Prime
-        </h1>
+        </NavLink>
 
-        <nav className="flex flex-wrap gap-4 text-sm font-medium text-slate-300">
-          <a href="/" className="hover:text-white">Home</a>
-          <a href="/services/healthcare" className="hover:text-white">Healthcare Advisory</a>
-          <a href="/services/real-estate" className="hover:text-white">RealEstate Advisory</a>
-          <a href="/business" className="hover:text-white">Business Advisory</a>
-          <a href="#contact" className="hover:text-white">Contact</a>
+        {/* Navigation */}
+        <nav className="flex flex-wrap gap-6 text-sm font-medium text-slate-300">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-white" : "hover:text-white"
+            }
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-white" : "hover:text-white"
+            }
+          >
+            About Us
+          </NavLink>
+
+          <NavLink
+            to="/services"
+            className="hover:text-white"
+          >
+            Services
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className="hover:text-white"
+          >
+            Contact
+          </NavLink>
         </nav>
       </div>
     </header>
   );
 }
-
