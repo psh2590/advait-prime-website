@@ -7,8 +7,12 @@ export default function Hero() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-          Trusted advisory partner with 10+ years of experience across
-          business consulting, real estate advisory, and healthcare management.
+          Advait Prime Consultancy & Services is a multi-domain consulting firm focused on enabling structured growth, strategic partnerships
+          , and effective project execution across real estate, industrial business, and healthcare sectors.
+          We work with landowners, investors, corporates, manufacturers, and healthcare institutions to identify opportunities, structure 
+          viable engagements, and support execution through a practical and process-driven approach.
+          With strong regional understanding and on-ground coordination capabilities, we assist clients in navigating commercial, operational
+          , and administrative complexities while maintaining clarity, efficiency, and professionalism.
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
@@ -29,3 +33,4 @@ export default function Hero() {
     </section>
   );
 }
+
