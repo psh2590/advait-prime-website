@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+/*import logo from "../assets/logo.png";*/
 
 export default function Navbar() {
   const location = useLocation();
@@ -17,16 +17,17 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-slate-950 border-b border-slate-800">
       <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         {/* Logo + Brand */}
-        <NavLink to="/" className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="Advait Prime"
-            className="h-8 w-auto md:h-10"
-          />
-          <span className="text-white font-bold text-base md:text-lg">
-            Advait Prime Consultancy & Services
-          </span>
-        </NavLink>
+     <NavLink to="/" className="flex items-center gap-3">
+        <img
+          src="/logo.png"
+          alt="Advait Prime Consultancy & Services"
+          className="h-8 w-auto md:h-10"
+        />
+        <span className="text-white font-bold text-base md:text-lg">
+          Advait Prime Consultancy & Services
+        </span>
+      </NavLink>
+
 
         {/* Nav */}
         <nav className="flex gap-6 text-sm text-slate-300">
@@ -47,3 +48,4 @@ export default function Navbar() {
     </header>
   );
 }
+
