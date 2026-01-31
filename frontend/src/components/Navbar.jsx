@@ -54,7 +54,7 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-8 text-sm font-medium">
           <NavLink to="/" className={navClass}>Home</NavLink>
           <NavLink to="/about" className={navClass}>About Us</NavLink>
-          <NavLink to="/#services">Services</NavLink>
+          <NavLink to="/#services" className={navClass}>Services</NavLink>
           <NavLink to="/contact" className={navClass}>Contact</NavLink>
         </nav>
 
@@ -92,4 +92,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 
