@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <section id="home" className="bg-slate-50">
@@ -16,12 +17,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
-          <a
-            href="#contact"
-            className="rounded-md bg-slate-900 px-8 py-3 text-sm font-semibold text-white hover:bg-slate-800"
+          <Link
+            to="/contact"
+            className="inline-block bg-indigo-600 hover:bg-indigo-700 transition px-6 py-3 rounded-md font-semibold text-white"
           >
             Get in Touch
-          </a>
+          </Link>
           <a
             href="#services"
             className="rounded-md border border-slate-300 px-8 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100"
@@ -33,4 +34,5 @@ export default function Hero() {
     </section>
   );
 }
+
 
