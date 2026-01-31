@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Healthcare from "./pages/Healthcare";
 import RealEstate from "./pages/RealEstate";
 import Business from "./pages/Business";
-import Healthcare from "./pages/Leadership";
+import Leadership from "./pages/Leadership";
 
 export default function App() {
   return (
@@ -16,7 +16,7 @@ export default function App() {
         <Route path="/services/healthcare" element={<Healthcare />} />
         <Route path="/services/real-estate" element={<RealEstate />} />
         <Route path="/services/business" element={<Business />} />
-        <Route path="/services/healthcare" element={<Leadership />} />
+        <Route path="/services/leadership" element={<Leadership />} />
       </Routes>
       <Footer />
     </BrowserRouter>
