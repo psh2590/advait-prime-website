@@ -4,19 +4,13 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  
-// ✅ scroll lock
+
+  // Scroll lock for mobile menu
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
+    document.body.style.overflow = open ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
   }, [open]);
-  
+
   const handleServicesClick = (e) => {
     setOpen(false);
     if (location.pathname === "/") {
@@ -27,63 +21,80 @@ export default function Navbar() {
     }
   };
 
-  return (
-    <header className="sticky top-0 z-50 bg-slate-950 border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+  const navClass = ({ isActive }) =>
+    `relative pb-1 transition ${
+      isActive
+        ? "text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-amber-400"
+        : "text-slate-200 hover:text-white"
+    }`;
 
-        {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-3">
+  return (
+    <header className="sticky top-0 z-50 bg-[#0b3a5c] shadow-md">
+      {/* Header Row */}
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+
+        {/* Logo + Brand */}
+        <NavLink to="/" className="flex items-center gap-4">
           <img
             src="/logo.png"
             alt="Advait Prime"
-            className="h-14 md:h-16 w-auto"
+            className="h-14 md:h-16 w-auto object-contain"
           />
-          <span className="text-white font-bold text-lg md:text-xl">
-            Advait Prime Consultancy & Services
-          </span>
+          <div className="text-white leading-tight">
+            <div className="text-lg md:text-xl font-bold">
+              Advait Prime Consultancy & Services
+            </div>
+            <div className="text-xs md:text-sm text-slate-200">
+              Strategic Consultancy for Real Estate, Business & Healthcare Projects
+            </div>
+          </div>
         </NavLink>
 
-        {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-          <NavLink to="/" className="hover:text-white">Home</NavLink>
-          <NavLink to="/about" className="hover:text-white">About Us</NavLink>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <NavLink to="/" className={navClass}>Home</NavLink>
+          <NavLink to="/about" className={navClass}>About Us</NavLink>
           <NavLink
             to="/#services"
             onClick={handleServicesClick}
-            className="hover:text-white"
+            className="relative pb-1 text-slate-200 hover:text-white"
           >
             Services
           </NavLink>
-          <NavLink to="/contact" className="hover:text-white">Contact</NavLink>
+          <NavLink to="/contact" className={navClass}>Contact</NavLink>
         </nav>
 
         {/* Hamburger */}
         <button
           className="md:hidden text-white text-2xl"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu"
         >
           ☰
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-800">
-          <nav className="flex flex-col px-6 py-4 gap-4 text-slate-300">
-            <NavLink onClick={() => setOpen(false)} to="/">Home</NavLink>
-            <NavLink onClick={() => setOpen(false)} to="/about">About Us</NavLink>
-            <NavLink
-              to="/#services"
-              onClick={handleServicesClick}
-            >
-              Services
-            </NavLink>
-            <NavLink onClick={() => setOpen(false)} to="/contact">Contact</NavLink>
-          </nav>
-        </div>
-      )}
+      <div
+        className={`md:hidden bg-[#0b3a5c] border-t border-white/10 transition-all duration-300 ease-in-out ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
+        <nav className="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+          <NavLink onClick={() => setOpen(false)} to="/" className={navClass}>
+            Home
+          </NavLink>
+          <NavLink onClick={() => setOpen(false)} to="/about" className={navClass}>
+            About Us
+          </NavLink>
+          <NavLink onClick={handleServicesClick} to="/#services" className="text-slate-200">
+            Services
+          </NavLink>
+          <NavLink onClick={() => setOpen(false)} to="/contact" className={navClass}>
+            Contact
+          </NavLink>
+        </nav>
+      </div>
     </header>
   );
 }
-
-
