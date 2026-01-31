@@ -1,10 +1,22 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
+  
+// ✅ scroll lock
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
+  
   const handleServicesClick = (e) => {
     setOpen(false);
     if (location.pathname === "/") {
@@ -73,4 +85,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 
