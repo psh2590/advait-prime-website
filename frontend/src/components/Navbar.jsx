@@ -1,10 +1,12 @@
 import { NavLink, useLocation } from "react-router-dom";
-/*import logo from "../assets/logo.png";*/
+import { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   const location = useLocation();
 
   const handleServicesClick = (e) => {
+    setOpen(false);
     if (location.pathname === "/") {
       e.preventDefault();
       document
@@ -15,25 +17,24 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-slate-950 border-b border-slate-800">
-      <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-        {/* Logo + Brand */}
-     <NavLink to="/" className="flex items-center gap-3">
-        <img
-          src="/logo.png"
-          alt="Advait Prime Consultancy & Services"
-          className="h-8 w-auto md:h-10"
-        />
-        <span className="text-white font-bold text-base md:text-lg">
-          Advait Prime Consultancy & Services
-        </span>
-      </NavLink>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
 
+        {/* Logo */}
+        <NavLink to="/" className="flex items-center gap-3">
+          <img
+            src="/logo.png"
+            alt="Advait Prime"
+            className="h-12 md:h-14 w-auto"
+          />
+          <span className="text-white font-bold text-lg md:text-xl">
+            Advait Prime
+          </span>
+        </NavLink>
 
-        {/* Nav */}
-        <nav className="flex gap-6 text-sm text-slate-300">
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
           <NavLink to="/" className="hover:text-white">Home</NavLink>
           <NavLink to="/about" className="hover:text-white">About Us</NavLink>
-
           <NavLink
             to="/#services"
             onClick={handleServicesClick}
@@ -41,11 +42,34 @@ export default function Navbar() {
           >
             Services
           </NavLink>
-
           <NavLink to="/contact" className="hover:text-white">Contact</NavLink>
         </nav>
+
+        {/* Hamburger */}
+        <button
+          className="md:hidden text-white text-2xl"
+          onClick={() => setOpen(!open)}
+        >
+          ☰
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden bg-slate-900 border-t border-slate-800">
+          <nav className="flex flex-col px-6 py-4 gap-4 text-slate-300">
+            <NavLink onClick={() => setOpen(false)} to="/">Home</NavLink>
+            <NavLink onClick={() => setOpen(false)} to="/about">About Us</NavLink>
+            <NavLink
+              to="/#services"
+              onClick={handleServicesClick}
+            >
+              Services
+            </NavLink>
+            <NavLink onClick={() => setOpen(false)} to="/contact">Contact</NavLink>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
-
