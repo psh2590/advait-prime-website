@@ -10,6 +10,7 @@ import RealEstate from "./pages/RealEstate";
 import Business from "./pages/Business";
 import Healthcare from "./pages/Healthcare";
 import Contact from "./pages/Contact";
+import NABH from "./pages/NABH";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         <Route path="/real-estate-advisory" element={<RealEstate />} />
         <Route path="/business-advisory" element={<Business />} />
         <Route path="/healthcare-advisory" element={<Healthcare />} />
+        <Route path="/nabh-certification" element={<NABH />} />
         
       </Routes>
 
