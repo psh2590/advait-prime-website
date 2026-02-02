@@ -50,7 +50,15 @@ export default function NABH() {
                            bg-white text-slate-900 placeholder-slate-400 
                            focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
-
+              <input
+                type="text"
+                name="state & city"
+                required
+                placeholder="In which state & city is your hospital?"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
               <input
                 type="text"
                 name="contact_person"
