@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Healthcare() {
   return (
     <div className="bg-slate-50 text-slate-800">
@@ -59,7 +60,54 @@ export default function Healthcare() {
         </div>
       </section>
 
-      {/* Section 3 */}
+  {/*Section 3 NABH Certification CTA */}
+<section className="py-16 px-6 bg-indigo-50">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    
+    {/* Left Content */}
+    <div>
+      <h2 className="text-2xl font-bold mb-4 text-slate-900">
+        NABH Certification Advisory & Implementation Support
+      </h2>
+
+      <p className="text-slate-700 mb-4">
+        Advait Prime supports hospitals and healthcare institutions through the
+        complete NABH accreditation journey — from gap analysis and documentation
+        to staff training and final assessment readiness.
+      </p>
+
+      <ul className="list-disc list-inside space-y-2 text-slate-700 mb-6">
+        <li>NABH gap assessment and readiness evaluation</li>
+        <li>Policy, SOP, and documentation support</li>
+        <li>Staff training and compliance sensitisation</li>
+        <li>Internal audit and pre-assessment preparation</li>
+        <li>Handholding till final NABH certification</li>
+      </ul>
+
+      <Link
+        to="/nabh-certification"
+        className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition"
+      >
+        Get NABH Certification Support
+      </Link>
+    </div>
+
+    {/* Right Highlight Card */}
+    <div className="bg-white p-6 rounded-xl shadow-md">
+      <h3 className="font-semibold mb-3 text-slate-900">
+        Who Should Opt for NABH Certification?
+      </h3>
+      <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm">
+        <li>Multi-speciality and super-speciality hospitals</li>
+        <li>Nursing homes and medical centres</li>
+        <li>Hospitals planning expansion or empanelment</li>
+        <li>Institutions seeking quality and compliance improvement</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+          {/* Section 4 */}
       <section className="py-16 px-6 bg-slate-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-slate-900">
@@ -77,7 +125,7 @@ export default function Healthcare() {
           </ul>
         </div>
       </section>
-
+      
       {/* CTA Section */}
       <section className="py-16 px-6 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto text-center">
