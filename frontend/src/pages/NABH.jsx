@@ -46,7 +46,9 @@ export default function NABH() {
                 name="hospital_name"
                 required
                 placeholder="Hospital / Healthcare Facility Name"
-                className="w-full border rounded-md p-3"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
 
               <input
@@ -54,7 +56,9 @@ export default function NABH() {
                 name="contact_person"
                 required
                 placeholder="Contact Person Name"
-                className="w-full border rounded-md p-3"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
 
               <input
@@ -62,7 +66,9 @@ export default function NABH() {
                 name="phone"
                 required
                 placeholder="Contact Number"
-                className="w-full border rounded-md p-3"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
 
               <input
@@ -70,12 +76,16 @@ export default function NABH() {
                 name="email"
                 required
                 placeholder="Email Address"
-                className="w-full border rounded-md p-3"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
 
               <select
                 name="hospital_type"
-                className="w-full border rounded-md p-3"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               >
                 <option value="">Hospital Type</option>
@@ -90,7 +100,9 @@ export default function NABH() {
                 name="message"
                 rows="3"
                 placeholder="Briefly describe your requirement"
-                className="w-full border rounded-md p-3"
+                className="w-full px-4 py-3 rounded-md border border-slate-300 
+                           bg-white text-slate-900 placeholder-slate-400 
+                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
               />
 
               <button
