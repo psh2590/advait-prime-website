@@ -1,10 +1,37 @@
+import { useState } from "react";
+
 export default function NABH() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      await fetch("https://formsubmit.co/ajax/advait.prime@gmail.com", {
+        method: "POST",
+        body: data,
+      });
+
+      setSubmitted(true);
+      form.reset();
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-slate-50 text-slate-800">
       {/* HERO */}
       <section className="bg-[#0b3a5c] text-white py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left Content */}
           <div>
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
@@ -32,94 +59,108 @@ export default function NABH() {
               Get NABH Certification Support
             </h2>
 
-            <form
-              action="https://formsubmit.co/advait.prime@gmail.com"
-              method="POST"
-              className="space-y-4"
-            >
-              {/* FormSubmit config */}
-              <input type="hidden" name="_subject" value="NABH Certification Enquiry" />
-              <input type="hidden" name="_captcha" value="false" />
+            {submitted ? (
+              <div className="bg-green-50 border border-green-200 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-green-700">
+                  Thank you!
+                </h3>
+                <p className="text-green-600 mt-2">
+                  Your NABH enquiry has been submitted successfully.  
+                  Our team will contact you shortly.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="NABH Certification Enquiry - Advait Prime"
+                />
+                <input type="hidden" name="_captcha" value="false" />
 
-              <input
-                type="text"
-                name="hospital_name"
-                required
-                placeholder="Hospital / Healthcare Facility Name"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-              <input
-                type="text"
-                name="state & city"
-                required
-                placeholder="In which state & city is your hospital?"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
-              <input
-                type="text"
-                name="contact_person"
-                required
-                placeholder="Contact Person Name"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
+                <input
+                  type="text"
+                  name="hospital_name"
+                  required
+                  placeholder="Hospital / Healthcare Facility Name"
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 placeholder-slate-400 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
 
-              <input
-                type="tel"
-                name="phone"
-                required
-                placeholder="Contact Number"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
+                <input
+                  type="text"
+                  name="location"
+                  required
+                  placeholder="Hospital Location (City, State)"
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 placeholder-slate-400 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
 
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Email Address"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
+                <input
+                  type="text"
+                  name="contact_person"
+                  required
+                  placeholder="Contact Person Name"
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 placeholder-slate-400 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
 
-              <select
-                name="hospital_type"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                required
-              >
-                <option value="">Hospital Type</option>
-                <option>Multi-speciality Hospital</option>
-                <option>Single-speciality Hospital</option>
-                <option>Nursing Home</option>
-                <option>Clinic / Medical Centre</option>
-                <option>Diagnostic Centre</option>
-              </select>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="Contact Number"
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 placeholder-slate-400 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
 
-              <textarea
-                name="message"
-                rows="3"
-                placeholder="Briefly describe your requirement"
-                className="w-full px-4 py-3 rounded-md border border-slate-300 
-                           bg-white text-slate-900 placeholder-slate-400 
-                           focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email Address"
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 placeholder-slate-400 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
 
-              <button
-                type="submit"
-                className="w-full bg-indigo-600 text-white py-3 rounded-md font-semibold hover:bg-indigo-700 transition"
-              >
-                Request NABH Support
-              </button>
-            </form>
+                <select
+                  name="hospital_type"
+                  required
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                >
+                  <option value="">Hospital Type</option>
+                  <option>Multi-speciality Hospital</option>
+                  <option>Single-speciality Hospital</option>
+                  <option>Nursing Home</option>
+                  <option>Clinic / Medical Centre</option>
+                  <option>Diagnostic Centre</option>
+                </select>
+
+                <textarea
+                  name="message"
+                  rows="3"
+                  placeholder="Briefly describe your requirement"
+                  className="w-full px-4 py-3 rounded-md border border-slate-300 
+                             bg-white text-slate-900 placeholder-slate-400 
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-indigo-600 text-white py-3 rounded-md font-semibold hover:bg-indigo-700 transition disabled:opacity-60"
+                >
+                  {loading ? "Submitting..." : "Request NABH Support"}
+                </button>
+              </form>
+            )}
           </div>
 
         </div>
