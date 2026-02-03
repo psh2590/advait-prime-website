@@ -16,7 +16,7 @@ export default function Healthcare() {
       </section>
 
       {/* Section 1 */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-slate-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-4 text-slate-900">
             End-to-End Hospital Management
@@ -108,7 +108,7 @@ export default function Healthcare() {
   </div>
 </section>
      {/* Section 4 */}
-      <section className="py-16 px-6 bg-slate-100">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-slate-900">
             TPA Desk Outsource
@@ -155,7 +155,7 @@ export default function Healthcare() {
       </section>
 
             {/* Section 6 */}
-      <section className="py-16 px-6 bg-slate-100">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-slate-900">
             Hospital Marketing and Branding
@@ -202,7 +202,7 @@ export default function Healthcare() {
       </section>
 
              {/* Section 8 */}
-      <section className="py-16 px-6 bg-slate-100">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-slate-900">
             Hospital Empanelment (Govt & Pvt TPA’S )
