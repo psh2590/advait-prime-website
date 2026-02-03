@@ -107,7 +107,121 @@ export default function Healthcare() {
 
   </div>
 </section>
-          {/* Section 4 */}
+     {/* Section 4 */}
+      <section className="py-16 px-6 bg-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">
+            TPA Desk Outsource
+          </h2>
+
+           <p className="text-slate-700 mb-4">
+              At Advait Prime, we offer comprehensive TPA Desk Outsourcing solutions for hospitals, managing the entire workflow of the TPA 
+              desk with precision and compliance. From daily operations to coordination and documentation, we ensure seamless functioning 
+              of your TPA desk, allowing your team to focus on patient care. Our services include:
+          </p>
+
+          <ul className="list-disc list-inside space-y-2 text-slate-700">
+            <li>Complete assistance in TPA desk setup, enrollment, and activation</li>
+            <li>Efficient management of day-to-day TPA desk workflows</li>
+            <li>Development and execution of robust operational protocols</li>
+            <li>Performance monitoring, data analysis, and insights</li>
+            <li>Professional handling of customer and insurer interactions</li>
+            <li>Streamlined insurance claim processing and follow-ups</li>
+            <li>Specialized expertise in billing accuracy and coding standards</li>
+            <li>Support for compliance, audits, and statutory reporting</li>
+          </ul>
+        </div>
+      </section>
+
+           {/* Section 5 */}
+      <section className="py-16 px-6 bg-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">
+            Hospital Software and IT support
+          </h2>
+
+           <p className="text-slate-700 mb-4">
+              We specialize in delivering end-to-end hospital software and IT support solutions for healthcare institutions. 
+              Our solutions are designed to improve operational efficiency, simplify clinical and administrative processes, and 
+              support high-quality patient care. 
+              Our offerings include customized healthcare software for patient management, scheduling, EMR, billing, and invoicing, 
+              along with complete IT support services such as implementation, training, system maintenance, and technical assistance. 
+              Through continuous support and expert guidance, we help healthcare organizations stay technologically updated and 
+              operationally efficient.
+
+              Connect with us to explore how our healthcare IT solutions can address your organization’s specific needs.
+          </p>
+         </div>
+      </section>
+
+            {/* Section 6 */}
+      <section className="py-16 px-6 bg-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">
+            Hospital Marketing and Branding
+          </h2>
+
+           <p className="text-slate-700 mb-4">
+              We offer comprehensive hospital marketing and branding solutions that help healthcare providers enhance visibility, credibility, 
+              and patient engagement. Our expertise lies in building strong healthcare brands, creating impactful marketing strategies, and delivering 
+              digital experiences that support patient acquisition and retention.
+
+              Our scope of services includes website development, social media marketing, content strategy, SEO, and digital advertising, 
+              all customized to align with the hospital’s objectives. Get in touch with us to explore our hospital marketing and branding
+              services in detail.
+
+              Connect with us to explore how our healthcare IT solutions can address your organization’s specific needs.
+          </p>
+         </div>
+      </section>
+
+             {/* Section 7 */}
+      <section className="py-16 px-6 bg-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">
+            Hospital ROHINI Registration
+          </h2>
+
+           <p className="text-slate-700 mb-4">
+           We offer Hospital ROHINI Registration services to support hospitals with seamless enrollment and compliance. Our service 
+           assists hospitals in completing the registration process efficiently, enabling them to be listed on the ROHINI platform and 
+           remain compliant with insurance and TPA requirements.
+
+           ROHINI (Registry of Hospitals in Network of Insurance) is a centralized registry of hospitals empanelled with health insurers
+           and Third-Party Administrators (TPAs) across India. The registry is developed and maintained by the Insurance Information 
+           Bureau of India (IIB), promoted by the Insurance Regulatory and Development Authority of India (IRDAI). It currently includes
+           approximately 33,000 verified hospitals, curated through extensive automated and manual de-duplication processes.
+
+           Being registered on ROHINI helps hospitals streamline insurance coordination, improve data accuracy, and enhance operational 
+           transparency. Over time, the ROHINI registry is evolving into a comprehensive, single-point reference for information related 
+           to health insurance, hospitals, insurers, service providers, customers, and regulators.
+
+           If you require assistance with ROHINI registration or updates, feel free to contact us—we’ll be happy to help.
+          </p>
+         </div>
+      </section>
+
+             {/* Section 8 */}
+      <section className="py-16 px-6 bg-slate-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-slate-900">
+            Hospital Empanelment (Govt & Pvt TPA’S )
+          </h2>
+
+           <p className="text-slate-700 mb-4">
+           We offer Hospital Empanelment services for Government and Private TPAs, supporting both public and private healthcare facilities. 
+           Our experienced team provides end-to-end guidance throughout the empanelment process, ensuring accuracy, compliance, and timely 
+           approvals.
+
+           We assist hospitals with empanelment across major TPAs and insurance providers, including Apollo, Bajaj Allianz, HDFC ERGO,
+           ICICI Lombard, Max Bupa, United India, and Star Health. Our scope of services covers preparation and submission of required 
+           documentation, coordination with TPAs for approvals, and execution of the final empanelment agreements. 
+           Additionally, we provide ongoing support through monitoring, tracking, and reporting of all empanelment-related activities.
+          </p>
+         </div>
+      </section>      
+      
+          {/* Section 9 */}
       <section className="py-16 px-6 bg-slate-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-slate-900">
