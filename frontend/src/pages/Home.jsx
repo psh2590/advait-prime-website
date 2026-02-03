@@ -32,6 +32,20 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Healthcare */}
+            <Link
+              to="/healthcare-advisory"
+              className="border rounded-xl p-8 hover:shadow-lg transition"
+            >
+              <h3 className="text-xl font-semibold mb-3">
+                Healthcare Advisory
+              </h3>
+              <p className="text-slate-600">
+                End-to-end hospital management, operational structuring,
+                compliance support, and healthcare consulting.
+              </p>
+            </Link>
+            
             {/* Real Estate */}
             <Link
               to="/real-estate-advisory"
@@ -60,20 +74,7 @@ export default function Home() {
               </p>
             </Link>
 
-            {/* Healthcare */}
-            <Link
-              to="/healthcare-advisory"
-              className="border rounded-xl p-8 hover:shadow-lg transition"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                Healthcare Advisory
-              </h3>
-              <p className="text-slate-600">
-                End-to-end hospital management, operational structuring,
-                compliance support, and healthcare consulting.
-              </p>
-            </Link>
-          </div>
+         </div>
         </div>
       </section>
 
